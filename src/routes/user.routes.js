@@ -3,7 +3,6 @@ import { logoutUser, registerUser,loginUser, changeCurrentPassword, getCurrentUs
 import { upload } from "../middlewares/multer.middleware.js";
 import { verifyJWT } from "../middlewares/auth.middleware.js";
 const router = Router()
-console.log("🔥 user.routes.js loaded");
 router.route("/register").post(
     upload.fields([
         {
