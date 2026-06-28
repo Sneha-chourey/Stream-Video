@@ -15,7 +15,13 @@ app.use(cookieParser())
 // routes
 import userRouter from"./routes/user.routes.js"
 
-
+app.get("/", (req, res) => {
+  res.json({
+    message: "Stream-Video API is running 🚀",
+    version: "1.0.0",
+    endpoints: "/api/v1/users"
+  });
+});
 // routes declaration
 app.use("/api/v1/users",userRouter)
 app.get("/debug", (req, res) => {
